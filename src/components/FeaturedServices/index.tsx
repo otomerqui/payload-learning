@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import configPromise from '@payload-config'
 import { getPayload } from 'payload'
 
@@ -10,6 +12,7 @@ export default async function FeaturedServices() {
 
   const services = await payload.find({
     collection: 'services',
+    depth: 1,
     where: {
       featured: {
         equals: true,

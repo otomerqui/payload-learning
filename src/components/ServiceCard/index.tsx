@@ -7,6 +7,7 @@ type Props = {
 }
 
 export const ServiceCard = ({ service }: Props) => {
+   console.log(service.heroImage)
   return (
     <article className="border rounded-lg overflow-hidden bg-card">
       <div>
