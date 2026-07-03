@@ -13,6 +13,7 @@ import { generateMeta } from '@/utilities/generateMeta'
 import PageClient from './page.client'
 import { LivePreviewListener } from '@/components/LivePreviewListener'
 import FeaturedServices from '@/components/FeaturedServices'
+import FeaturedTestimonials from '@/components/FeaturedTestimonials'
 
 export async function generateStaticParams() {
   const payload = await getPayload({ config: configPromise })
@@ -77,6 +78,7 @@ export default async function Page({ params: paramsPromise }: Args) {
 
       <RenderHero {...hero} />
       {decodedSlug === 'home' && <FeaturedServices />}
+      {decodedSlug === 'home' && <FeaturedTestimonials />}
       <RenderBlocks blocks={layout} />
     </article>
   )
